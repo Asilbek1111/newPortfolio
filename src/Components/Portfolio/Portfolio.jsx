@@ -3,8 +3,8 @@ import "./Portfolio.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Sidebar from "../../img/youtube.png";
-import Ecommerce from "../../img/movies.webp";
-import Hoc from "../../img/bootstrap.png";
+import Ecommerce from "../../img/e-commerce.png";
+import Hoc from "../../img/parallax1.png";
 import MusicApp from "../../img/dog.png";
 import { themeContext } from "../../Context";
 import { useContext } from "react";
@@ -26,14 +26,14 @@ const Portfolio = () => {
         className="portfolio-slider"
       >
         <SwiperSlide>
-          <a href="https://utubedownload.netlify.app/" target="_blank">
-            <img src={Sidebar} alt="" />
+          <a href="https://pro-goods.netlify.app/" target="_blank">
+            <img src={Ecommerce} alt="" />
           </a>
         </SwiperSlide>
 
         <SwiperSlide>
-          <a href="https://moviee-search-js.netlify.app/" target="_blank">
-            <img src={Ecommerce} alt="" />
+          <a href="https://utubedownload.netlify.app/" target="_blank">
+            <img src={Sidebar} alt="" />
           </a>
         </SwiperSlide>
 
@@ -43,7 +43,9 @@ const Portfolio = () => {
           </a>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Hoc} alt="" />
+          <a href="https://parallax1-my.netlify.app/">
+            <img src={Hoc} alt="" />
+          </a>
         </SwiperSlide>
       </Swiper>
     </div>
