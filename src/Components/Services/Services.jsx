@@ -7,8 +7,7 @@ import Card from "../Card/Card";
 import { themeContext } from "../../Context";
 import { useContext } from "react";
 import { motion } from "framer-motion";
-import resume from '../../img/resume.png'
-
+import resume from "../../img/resume.png";
 
 const Services = () => {
   const theme = useContext(themeContext);
@@ -25,8 +24,11 @@ const Services = () => {
           Take a joy seeing my work. Speed, Quality, and high performance
           <br /> are in the first place
         </span>
-        <a href={resume} download>
-          <button className="s-button button">Download CV</button>
+        <a
+          href="https://www.canva.com/design/DAFI5XObUxs/ToY09j_PYKTCwkbgKf9asw/view?utm_content=DAFI5XObUxs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+          download
+        >
+          <button className="s-button button">My CV(resume)</button>
         </a>
         <div
           className="blur blur1"
