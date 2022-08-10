@@ -9,6 +9,7 @@ import MusicApp from "../../img/dog.png";
 import { themeContext } from "../../Context";
 import { useContext } from "react";
 import Alibaraka from "../../img/alibaraka.PNG";
+import Todo from "../../img/todo.png";
 
 const Portfolio = () => {
   const theme = useContext(themeContext);
@@ -43,6 +44,13 @@ const Portfolio = () => {
             <img src={Sidebar} alt="" />
           </a>
         </SwiperSlide>
+
+        <SwiperSlide>
+          <a href="https://num1-todo-app.netlify.app/" target="_blank">
+            <img src={Todo} alt="" />
+          </a>
+        </SwiperSlide>
+
         <SwiperSlide>
           <a href="https://parallax1-my.netlify.app/">
             <img src={Hoc} alt="" />
