@@ -8,6 +8,7 @@ import Hoc from "../../img/parallax1.png";
 import MusicApp from "../../img/dog.png";
 import { themeContext } from "../../Context";
 import { useContext } from "react";
+import Alibaraka from "../../img/alibaraka.PNG";
 
 const Portfolio = () => {
   const theme = useContext(themeContext);
@@ -26,6 +27,12 @@ const Portfolio = () => {
         className="portfolio-slider"
       >
         <SwiperSlide>
+          <a href="https://alibaraka.com/" target="_blank">
+            <img src={Alibaraka} alt="" />
+          </a>
+        </SwiperSlide>
+
+        <SwiperSlide>
           <a href="https://pro-goods.netlify.app/" target="_blank">
             <img src={Ecommerce} alt="" />
           </a>
@@ -36,15 +43,15 @@ const Portfolio = () => {
             <img src={Sidebar} alt="" />
           </a>
         </SwiperSlide>
+        <SwiperSlide>
+          <a href="https://parallax1-my.netlify.app/">
+            <img src={Hoc} alt="" />
+          </a>
+        </SwiperSlide>
 
         <SwiperSlide>
           <a href="http://aslbekblog.epizy.com/">
             <img src={MusicApp} alt="" />
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a href="https://parallax1-my.netlify.app/">
-            <img src={Hoc} alt="" />
           </a>
         </SwiperSlide>
       </Swiper>
