@@ -7,7 +7,7 @@ import Card from "../Card/Card";
 import { themeContext } from "../../Context";
 import { useContext } from "react";
 import { motion } from "framer-motion";
-import resume from "../../img/resume.png";
+import Resume from "../../img/Resume.pdf";
 
 const Services = () => {
   const theme = useContext(themeContext);
@@ -25,7 +25,7 @@ const Services = () => {
           <br /> are in the first place
         </span>
         <a
-          href="https://www.canva.com/design/DAFI5XObUxs/ToY09j_PYKTCwkbgKf9asw/view?utm_content=DAFI5XObUxs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+          href={Resume}
           download
         >
           <button className="s-button button">My CV(resume)</button>

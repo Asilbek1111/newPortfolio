@@ -1,7 +1,7 @@
 import React from "react";
 import "./Contact.scss";
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import { themeContext } from "../../Context";
 import { useContext } from "react";
 
@@ -10,28 +10,59 @@ const Contact = () => {
   const darkMode = theme.state.darkMode;
   const form = useRef();
 
-  const [done, setDone] = useState(false);
-
-  const sendEmail = (e) => {
+  const [done,setDone] = useState(false);
+  const formBtn = (e) => {
     e.preventDefault();
+    if (
+      e.target[0].value.length > 0 &&
+      e.target[1].value.length > 0 &&
+      e.target[2].value.length > 0
+    ) {
+      let botMessege = `
+Salom Asilbek, Yangi Xabar!😊%0A
+Ismi 👤: ${e.target[0].value}%0A
+Raqam ☎: ${e.target[1].value}%0A 
+Xabar ☎: ${e.target[2].value}%0A              
+                `;
+      //  console.log(botMessege)
 
-    emailjs
-      .sendForm(
-        "service_17gh2pf",
-        "template_j04wrns",
-        form.current,
-        "bjhge5J4SbDsYJKls"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setDone(true);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+      let url = `https://api.telegram.org/bot5486634028:AAHI_5CAe6SIpKbNNHIdwu6W7tU4kANPX4k/sendMessage?chat_id=1328407566&text=${botMessege}`;
+      async function fetchAsync(url) {
+        let response = await fetch(url);
+        let data = await response.json();
+        return data;
+      }
+      fetchAsync(url);
+      e.target[0].value = "";
+
+      e.target[1].value = "";
+
+      e.target[2].value = "";
+    } else {
+      return -1;
+    }
   };
+
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+
+  //   emailjs
+  //     .sendForm(
+  //       "service_17gh2pf",
+  //       "template_j04wrns",
+  //       form.current,
+  //       "bjhge5J4SbDsYJKls"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //         setDone(true);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  // };
 
   return (
     <div className="contact-form" id="Contact">
@@ -42,19 +73,18 @@ const Contact = () => {
         </div>
       </div>
       <div className="c-right">
-        <form ref={form} onSubmit={sendEmail} className='f-form'>
+        <form ref={form} onSubmit={formBtn} className="f-form">
           <input
             type="text"
             name="user_name"
             className="user"
             placeholder="Name"
-            
           />
           <input
             type="email"
             name="user_email"
             className="user"
-            placeholder="Email"
+            placeholder="Tel Number"
           />
           <textarea
             name="message"
