@@ -84,7 +84,7 @@ Xabar ☎: ${e.target[2].value}%0A
             type="email"
             name="user_email"
             className="user"
-            placeholder="Tel Number"
+            placeholder="Email"
           />
           <textarea
             name="message"

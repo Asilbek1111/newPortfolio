@@ -10,6 +10,7 @@ import { themeContext } from "../../Context";
 import { useContext } from "react";
 import Alibaraka from "../../img/alibaraka.PNG";
 import Todo from "../../img/todo.png";
+import Baf from "../../img/baf2.png";
 
 const Portfolio = () => {
   const theme = useContext(themeContext);
@@ -30,6 +31,12 @@ const Portfolio = () => {
         <SwiperSlide>
           <a href="https://alibaraka.com/" target="_blank">
             <img src={Alibaraka} alt="" />
+          </a>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <a href="https://baf.vercel.app/" target="_blank">
+            <img src={Baf} alt="" />
           </a>
         </SwiperSlide>
 
